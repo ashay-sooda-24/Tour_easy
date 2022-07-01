@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExploreFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/panambur" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Panambur Beach"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Panambur Beach is a beach in the city of Mangalore in the Indian state of Karnataka.
+
+This beach is on the shores of Arabian sea and is credited as one of the safest and best maintained beaches of India.It is the most popular, well connected and the most visited beach of Karnataka." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tannibhavi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tannirbhavi Beach"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="It is one of those beaches that have trees on them and offers a picturesque landscape.One can sit under the green trees and lose track of time while enjoying the scenic beauty of the place." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/kadri" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kadri Temple"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="the chief deity of this temple is Manjunatha, which incorporates a Shiva linga. The statue of Lokeshwara in the seated position with three faces and six arms is tipped to be the best bronze statue in India." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/nisarga" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pilikula Nisargadham"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pilikula Nisargadhama is a multi-purpose tourist attraction, at Vamanjoor, eastern part of Mangalore city in Karnataka, managed by the District Administration of Dakshina Kannada. It is a major tourist attraction." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/managaladevi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mangaldevi Temple"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Mangaladevi Temple is dedicated to Hindu god Shakti. The city of Mangalore is named after the presiding deity, Mangaladevi." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/kateel" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kateel Temple"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kateel or Kateelu is a temple town in the Dakshina Kannada district of the Indian state of Karnataka. It is considered one of the holiest Hindu temple towns in India. It is situated on the banks of the river Nandini." />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sulthan" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sultan Battery"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Sultan Bateri watch tower, constructed in 1784 by Tipu Sultan is in Boloor, 4 km from the centre of Mangalore city, the chief port city in the state of Karnataka, India." />
+                </LinearLayout>
+
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
