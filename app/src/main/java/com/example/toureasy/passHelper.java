@@ -3,6 +3,7 @@ package com.example.toureasy;
 public class passHelper {
 
     public static  String username;
+    public static int id;
 
 
     public static void setUsername(String name){
@@ -10,11 +11,17 @@ public class passHelper {
     }
 
     public static String getUsername(){
-//        if(username!=null){
             return username;
-//        }
-//        return "OOps";
     }
+
+    public static void setId(int ids){
+        id=ids;
+    }
+
+    public static int getId(){
+        return id;
+    }
+
 
 
 }
