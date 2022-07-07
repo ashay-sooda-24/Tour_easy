@@ -28,22 +28,14 @@ public class DBHelper3 extends SQLiteOpenHelper {
 
     public void destinationInsert(){
         int i,j,k=0;
-//        String[] sourceList = {"KSRTC","Railway Station","Airport"};
         String[] destList = {"Panambur Beach","Tannirbhavi Beach", "Kadri Temple", "Pilikula Nisargadham", "Mangaldevi Temple","Kateel","Sulthan Bathery"};
-//        double[] distances = {11,12.6,4.9,10,9.5,22.5,6,14.1,13,4,14.3,3.5,30,5.1,14,16,12,11,17,11.2,14};
         SQLiteDatabase MyDB = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         long result=0;
         for(i=0;i<7;i++){
-//            for(j=0;j<7;j++) {
             contentValues.put("did", i+1);
-//                contentValues.put("did",j+1);
             contentValues.put("dname", destList[i]);
-//                contentValues.put("dname",destList[j]);
-//                contentValues.put("dist",distances[k]);
-//                k++;
             result = MyDB.insert("destination", null, contentValues);
-//            }
         }
         MyDB.close();
     }
@@ -53,16 +45,12 @@ public class DBHelper3 extends SQLiteOpenHelper {
         Cursor cursor = MyDB.rawQuery("Select did from destination where dname  = ?", new String[]{destina});
         if(cursor.getCount()>0){
             String id = null;
-            int count = 0;
             while(cursor.moveToNext()){
                 id = cursor.getString(0);
-                count++;
             }
-//            int id = cursor.getCount();
             cursor.close();
             MyDB.close();
             return Integer.parseInt(id);
-
         }
         cursor.close();
         MyDB.close();
@@ -148,7 +136,6 @@ public class DBHelper3 extends SQLiteOpenHelper {
                 id = cursor.getString(0);
                 count++;
             }
-//            int id = cursor.getCount();
             cursor.close();
             MyDB.close();
 
@@ -167,12 +154,9 @@ public class DBHelper3 extends SQLiteOpenHelper {
         Cursor cursor = MyDB.rawQuery("Select mapLink from distan where sid = ? and did=?",new String[]{sid,didd});
         if(cursor.getCount()>0){
             String id = null;
-            int count = 0;
             while(cursor.moveToNext()){
                 id = cursor.getString(0);
-                count++;
             }
-//            int id = cursor.getCount();
             cursor.close();
             MyDB.close();
 
@@ -191,21 +175,16 @@ public class DBHelper3 extends SQLiteOpenHelper {
         Cursor cursor = MyDB.rawQuery("Select uberLink from distan where sid = ? and did=?",new String[]{sid,didd});
         if(cursor.getCount()>0){
             String id = null;
-            int count = 0;
             while(cursor.moveToNext()){
                 id = cursor.getString(0);
-                count++;
             }
-//            int id = cursor.getCount();
             cursor.close();
             MyDB.close();
 
             return id;
-
         }
         cursor.close();
         MyDB.close();
         return null;
     }
-
 }

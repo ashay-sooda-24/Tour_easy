@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -24,6 +25,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
+import com.getkeepsafe.taptargetview.TapTargetView;
+
 
 public class HomeFragment extends Fragment {
 
@@ -32,7 +37,6 @@ public class HomeFragment extends Fragment {
     String[] destin = {"Panambur Beach","Tannirbhavi Beach", "Kadri Temple", "Pilikula Nisargadham", "Mangaldevi Temple","Kateel","Sulthan Bathery"};
     TextView greetingsDisplay;
     TextView kmDetail;
-    Button btnTour,checkFare;
     passHelper passer = new passHelper();
     DBHelper DB;
     DBHelper3 DB3;
@@ -54,16 +58,10 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_home, container, false);
 
-
-
-//        DB2 =  new DBHelper2(getActivity());
         DB3 =  new DBHelper3(getActivity());
         DB = new DBHelper(getActivity());
-//        passer = new passHelper();
-        String username = passer.getUsername();
         greetingsDisplay = view.findViewById(R.id.greetingsDisplay);
         kmDetail = view.findViewById(R.id.kmDetail);
-//        greetingsDisplay.setText(username);
 
         sharedPreferences = getActivity().getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
@@ -84,6 +82,8 @@ public class HomeFragment extends Fragment {
         myDialog = new Dialog(getActivity());
 
 
+
+
         //this
         adapterSource = new ArrayAdapter<String>(getActivity(),R.layout.source_dropdown,source);
         adapterDestin = new ArrayAdapter<String>(getActivity(), R.layout.source_dropdown, destin);
@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Source = adapterView.getItemAtPosition(i).toString();
-                Toast.makeText(getActivity(), "Source: "+Source, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Source: "+Source, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -104,23 +104,144 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Destin = adapterView.getItemAtPosition(i).toString();
-                Toast.makeText(getActivity(), "Destination: " + Destin, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Destination: " + Destin, Toast.LENGTH_SHORT).show();
             }
         });
+
+        if(sharedPreferences.getBoolean("firstRun",true)){
+            new TapTargetSequence(getActivity()).targets(
+                    TapTarget.forView(greetingsDisplay,"Welcome " + name,"Touring made easy! Let's take a Tour of this tour easy app.")
+                            .outerCircleColor(R.color.orange)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(autoCompleteTxt,"Source Entry","Here you have to choose your starting location")
+                            .outerCircleColor(R.color.teal_200)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(autoCompleteText2,"Destination Entry","Enter your destination spot")
+                            .outerCircleColor(R.color.teal_200)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(btnTour,"Check distance", "This button will quickly display the distance you have to travel")
+                            .outerCircleColor(R.color.teal_200)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(checkFare,"Check fare Options","Click on this button to find out all the fare options available. You can further book your uber ride or check the maps without any hastle!!")
+                            .outerCircleColor(R.color.teal_200)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(logOut,"Log Out","You do not have to leave us but...if you still want to, then feel free to log out!We will be waiting for you")
+                            .outerCircleColor(R.color.pink)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(22)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextSize(18)
+                            .descriptionTextColor(R.color.black)
+                            .textColor(R.color.black)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60)).listener(new TapTargetSequence.Listener() {
+                @Override
+                public void onSequenceFinish() {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.clear();
+                    editor.putBoolean("hasLoggedIn",true);
+                    editor.putBoolean("firstRun",false);
+                    editor.apply();
+                    editor.commit();
+                    Toast.makeText(getActivity(), "Awesome! Now Let's go!", Toast.LENGTH_SHORT).show();
+                }
+
+
+                @Override
+                public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+                    Toast.makeText(getActivity(), "GREAT!", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onSequenceCanceled(TapTarget lastTarget) {
+
+                }
+            }).start();
+
+        }
+
+
 
         btnTour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(getActivity(), "Source: "+Source + "Destin: " + Destin, Toast.LENGTH_SHORT).show();
-//                if (Source.equals("KSRTC") && Destin.equals("Panambur Beach")) {
                     int sourceId = DB.checkSourceId(Source);
                     int destinId = DB3.checkDestinationId(Destin);
                     float distance = DB3.getDistan(sourceId,destinId);
                     String dist = Float.toString(distance);
                     kmDetail.setText(dist + " km");
-//                    boolean res =DB3.getDistan(1,1);
-                    Toast.makeText(getActivity(), "Source Id: " + sourceId + " Destin id: " + destinId + " dist: " + distance, Toast.LENGTH_SHORT).show();
-//                }
+//                    Toast.makeText(getActivity(), "Source Id: " + sourceId + " Destin id: " + destinId + " dist: " + distance, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -135,7 +256,7 @@ public class HomeFragment extends Fragment {
 
                     kmDetail.setText(dist + " km");
 
-                    Toast.makeText(getActivity(), Source + Destin + dist, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(), Source + Destin + dist, Toast.LENGTH_SHORT).show();
                         ShowPopup(dist,distance,sourceId,destinId);
                 }
                 else Toast.makeText(getActivity(), "Please enter the Source and Destination", Toast.LENGTH_SHORT).show();
@@ -148,14 +269,16 @@ public class HomeFragment extends Fragment {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.putBoolean("hasLoggedIn",false);
+                editor.putBoolean("firstRun",false);
                 editor.apply();
                 editor.commit();
-//                getActivity().finish();
                 Intent intent = new Intent(getActivity(),LoginActivity.class);
                 startActivity(intent);
                 Toast.makeText(getActivity(),"Succesfully Logged out",Toast.LENGTH_SHORT).show();
             }
         });
+        
+
 
 
 

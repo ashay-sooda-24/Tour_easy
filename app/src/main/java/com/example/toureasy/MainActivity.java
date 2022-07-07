@@ -13,23 +13,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button Trial;
-
     private static int SPLASH_TIME_OUT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        Trial = (Button) findViewById(R.id.trial);
-//        Trial.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         new Handler().postDelayed(new Runnable() {
             @Override

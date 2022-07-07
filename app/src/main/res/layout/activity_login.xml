@@ -30,4 +30,13 @@
         android:layout_marginTop="50dp"
         android:layout_below="@+id/password1"/>
 
+    <TextView
+        android:id="@+id/Signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnsignin1"
+        android:gravity="center"
+        android:text="Do not have an account? Sign Up now!"
+        android:textStyle="bold|italic" />
+
 </RelativeLayout>

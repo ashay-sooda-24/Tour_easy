@@ -46,12 +46,13 @@
         android:layout_marginTop="50dp"
         android:layout_below="@+id/repassword"/>
 
-    <Button
+    <TextView
         android:id="@+id/btnsignin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnsignup"
-        android:layout_marginTop="50dp"
-        android:text="Existing User! go to signin page" />
+        android:gravity="center"
+        android:text="Already have an account? Sign in"
+        android:textStyle="bold|italic" />
 
 </RelativeLayout>

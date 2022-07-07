@@ -8,22 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
 
     EditText username,phone, password,repassword;
-    Button signup,signin;
+    TextView signin;
+    Button signup;
     DBHelper DB;
-    //    DBHelper2 DB2;
     DBHelper3 DB3;
-    passHelper passR;
+//    passHelper passR;
 
     SharedPreferences sharedPreferences;
+    private static final String SHARED_PREF_NAME = "mypref";
+    private static final String KEY_NAME = "name";
 
-    //sharedpreferences name and key name
-//    private static final String SHARED_PREF_NAME = "mypref";
-//    private static final String KEY_NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,22 +34,13 @@ public class RegisterActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.repassword);
         phone = (EditText) findViewById(R.id.phone);
-        signin = (Button) findViewById(R.id.btnsignin);
+        signin = (TextView) findViewById(R.id.btnsignin);
         signup = (Button) findViewById(R.id.btnsignup);
         DB = new DBHelper(this);
-//        DB2 = new DBHelper2(this);
         DB3 = new DBHelper3(this);
-        passR = new passHelper();
+//        passR = new passHelper();
 
-        //checking for already logged in user or not ie availibility of data
-
-//        String name = sharedPreferences.getString(KEY_NAME,null);
-//
-//        if(name != null){
-//            //if data available the go to home
-//            Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-//            startActivity(intent);
-//        }
+        SharedPreferences sharedPreferences = getSharedPreferences(LoginActivity.SHARED_PREF_NAME,0);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +60,19 @@ public class RegisterActivity extends AppCompatActivity {
 
                             if(insert ==true){
 //                                Toast.makeText(MainActivity.this,"Registered successfully!",Toast.LENGTH_SHORT).show();
-                                passR.setUsername(user);
-//                                DB.sourceInsert();
-//                                DB3.destinationInsert();
-//                                DB3.insertDistance();
-//                                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
-//                                startActivity(intent);
-                                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+//                                passR.setUsername(user);
+                                DB.sourceInsert();
+                                DB3.destinationInsert();
+                                DB3.insertDistance();
+
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString(KEY_NAME,user);
+                                editor.putBoolean("firstRun",true);
+                                editor.apply();
+                                editor.commit();
+                                finish();
+
+                                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
                             }else{
                                 Toast.makeText(RegisterActivity.this,"Registration failed",Toast.LENGTH_SHORT).show();

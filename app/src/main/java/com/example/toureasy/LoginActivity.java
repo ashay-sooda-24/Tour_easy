@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -15,10 +16,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText username,password;
     Button btnlogin;
     DBHelper DB;
-//    DBHelper2 DB2;
     DBHelper3 DB3;
-    passHelper passD;
     SharedPreferences sharedPreferences;
+    TextView SignUp;
 
     //sharedpreferences name and key name
     public static final String SHARED_PREF_NAME = "mypref";
@@ -35,8 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin = (Button)  findViewById(R.id.btnsignin1);
         DB = new DBHelper(this);
         DB3 = new DBHelper3(this);
-//        DB2 = new DBHelper2(this);
-        passD = new passHelper();
+        SignUp = (TextView) findViewById(R.id.Signup);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
 
@@ -62,24 +61,16 @@ public class LoginActivity extends AppCompatActivity {
                 else{
                     Boolean checkuserpass = DB.checkusernamepassword(user,pass);
                     if(checkuserpass == true){
-
-                        passD.setUsername(user);
-//                        passD = new passHelper();
                         DB.sourceInsert();
                         DB3.destinationInsert();
                         DB3.insertDistance();
-//                        boolean res = DB.destinInsert();
-//                        Toast.makeText(LoginActivity.this, "res: " + res, Toast.LENGTH_SHORT).show();
-//                        DB.destinationInsert();
 
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString(KEY_NAME,user);
-
                         editor.putBoolean("hasLoggedIn",true);
-
                         editor.apply();
-
                         finish();
+
                         Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this,"Sign in Successfull " + user,Toast.LENGTH_SHORT).show();
@@ -87,6 +78,14 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
