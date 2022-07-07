@@ -53,10 +53,10 @@
             android:layout_width="115dp"
             android:layout_height="80dp"
             android:background="@color/orange"
-            android:text="38Rs"
+            android:text="Rs200-300"
             android:textColor="@color/white"
             android:gravity="center"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:drawableTop="@drawable/ic_baseline_directions_car_24"
             android:padding="10dp"/>
 
@@ -67,7 +67,7 @@
             android:drawableTop="@drawable/ic_baseline_directions_walk_24"
             android:gravity="center"
             android:padding="10dp"
-            android:text="33Rs"
+            android:text="Rs 0"
             android:textColor="@color/white"
             android:textSize="20dp"
             tools:ignore="TextContrastCheck" />

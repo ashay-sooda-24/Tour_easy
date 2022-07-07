@@ -1,7 +1,9 @@
 package com.example.toureasy;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -35,7 +37,7 @@ public class HomeFragment extends Fragment {
     DBHelper DB;
     DBHelper3 DB3;
     Dialog myDialog;
-
+    SharedPreferences sharedPreferences;
     String Source;
     String Destin;
 
@@ -43,12 +45,16 @@ public class HomeFragment extends Fragment {
 
     ArrayAdapter<String> adapterSource,adapterDestin;
 
+    private static final String SHARED_PREF_NAME = "mypref";
+    private static final String KEY_NAME = "name";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.fragment_home, container, false);
+
+
 
 //        DB2 =  new DBHelper2(getActivity());
         DB3 =  new DBHelper3(getActivity());
@@ -58,10 +64,18 @@ public class HomeFragment extends Fragment {
         greetingsDisplay = view.findViewById(R.id.greetingsDisplay);
         kmDetail = view.findViewById(R.id.kmDetail);
 //        greetingsDisplay.setText(username);
-        greetingsDisplay.setText("Hello " + username);
+
+        sharedPreferences = getActivity().getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+
+        String name = sharedPreferences.getString(KEY_NAME,null);
+
+        greetingsDisplay.setText("Hello " + name);
 
         Button btnTour = view.findViewById(R.id.btnTour);
         Button checkFare = view.findViewById(R.id.checkFare);
+        Button logOut = view.findViewById(R.id.btnLogOut);
+
+
 
         autoCompleteTxt = view.findViewById(R.id.auto_complete_txt);
         autoCompleteText2 = view.findViewById(R.id.auto_complete_txt2);
@@ -128,6 +142,20 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.putBoolean("hasLoggedIn",false);
+                editor.apply();
+                editor.commit();
+//                getActivity().finish();
+                Intent intent = new Intent(getActivity(),LoginActivity.class);
+                startActivity(intent);
+                Toast.makeText(getActivity(),"Succesfully Logged out",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 

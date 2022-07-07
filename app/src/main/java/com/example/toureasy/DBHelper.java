@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("CREATE TABLE USERS(username TEXT PRIMARY KEY, password TEXT)");
+        MyDB.execSQL("CREATE TABLE USERS(username TEXT PRIMARY KEY, password TEXT,phone INTEGER)");
 //        MyDB.execSQL("CREATE TABLE SOURCE(sid INTEGER,did INTEGER ,sname TEXT,dname TEXT,PRIMARY KEY(sid,did))");
         MyDB.execSQL("CREATE TABLE SOURCE(sid INTEGER,sname TEXT,PRIMARY KEY(sid))");
 
@@ -55,11 +55,12 @@ public class DBHelper extends SQLiteOpenHelper {
 //        else return true;
 //    }
 
-    public Boolean insertData(String username, String password){
+    public Boolean insertData(String username, String password,int phone){
         SQLiteDatabase MyDB = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username",username);
         contentValues.put("password",password);
+        contentValues.put("phone",phone);
         long result = MyDB.insert("users",null,contentValues);
         MyDB.close();
         if(result==-1) return false;
@@ -120,6 +121,23 @@ public class DBHelper extends SQLiteOpenHelper {
             MyDB.close();
             return Integer.parseInt(id);
 
+        }
+        cursor.close();
+        MyDB.close();
+        return 00;
+    }
+
+    public int getPhone(String username){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select phone from users where username = ?",new String[]{username});
+        if(cursor.getCount()>0){
+            String phone = null;
+            while(cursor.moveToNext()){
+                phone = cursor.getString(0);
+            }
+            cursor.close();
+            MyDB.close();
+            return Integer.parseInt(phone);
         }
         cursor.close();
         MyDB.close();
