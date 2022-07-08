@@ -236,11 +236,14 @@ public class HomeFragment extends Fragment {
         btnTour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(Source!=null && Destin!=null){
                     int sourceId = DB.checkSourceId(Source);
                     int destinId = DB3.checkDestinationId(Destin);
                     float distance = DB3.getDistan(sourceId,destinId);
                     String dist = Float.toString(distance);
                     kmDetail.setText(dist + " km");
+                }
+                else Toast.makeText(getActivity(), "Please enter the Source and Destination", Toast.LENGTH_SHORT).show();
 //                    Toast.makeText(getActivity(), "Source Id: " + sourceId + " Destin id: " + destinId + " dist: " + distance, Toast.LENGTH_SHORT).show();
             }
         });
@@ -248,7 +251,7 @@ public class HomeFragment extends Fragment {
         checkFare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Source!=null || Destin!=null){
+                if(Source!=null && Destin!=null){
                     int sourceId = DB.checkSourceId(Source);
                     int destinId = DB3.checkDestinationId(Destin);
                     float distance = DB3.getDistan(sourceId,destinId);

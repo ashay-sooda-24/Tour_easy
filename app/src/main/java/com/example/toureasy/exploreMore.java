@@ -2,7 +2,10 @@ package com.example.toureasy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +13,7 @@ public class exploreMore extends AppCompatActivity {
     ImageView img;
     TextView title,placeDesc;
 
+    ImageView backBtn;
     passHelper passer = new passHelper();
 
     @Override
@@ -20,6 +24,7 @@ public class exploreMore extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.imageView);
         title = (TextView) findViewById(R.id.imageTitle);
         placeDesc = (TextView) findViewById(R.id.placeDesc);
+        backBtn = (ImageView) findViewById(R.id.backbtn);
         int imgId = passer.getId();
 
         switch (imgId){
@@ -87,6 +92,14 @@ public class exploreMore extends AppCompatActivity {
                 placeDesc.setText("The Sultan Bateri watch tower, constructed in 1784 by Tipu Sultan is in Boloor, 4 km from the centre of Mangalore city, the chief port city in the state of Karnataka, India."+"\n" + "It was the major dockyard and arsenal of the ruler. It was a naval station and was of great importance to the sultan as he used it to intercept enemy warships and prevent them from docking.");
                 break;
         }
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //need to go to exploreFragment.
+                finish();
+            }
+        });
 
     }
 }
