@@ -37,8 +37,6 @@ The project uses sqlLite as its database.
    <img src="https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png"  height="400" width="800" >
    <img src="https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png"  height="400" width="800" >
    </div>
-   ![SourceTable](https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png)
-   ![DestinationTable](https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png)
 
  # Further Development options:
  1. Integrating with google API ie places api, direction api, geolocation api which can be used to get realtime location of the user insted of hardcoded       data. 
