@@ -1,4 +1,4 @@
-# Tour_easy
+# Tour_easy 🚀
 App that helps tourists to enjoy their travel time in mangalore city. It is a simple app built to learn the concepts of sqlLite and Mobile application development.  
 The project uses sqlLite as its database.
 
