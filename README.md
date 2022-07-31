@@ -14,7 +14,7 @@ The project uses sqlLite as its database.
     step 1: Download sqlite Browser. https://sqlitebrowser.org/dl/   <br/>
     step 2: Run the project using the emulator. <br/>
     step 3: Go to device Explorer section in right side of Android studio. Go to the following driectory: <br/>
-             &emsp; data>data>com.example.Tour_easy>databases. <br/>
+             &emsp;&ensp; data>data>com.example.Tour_easy>databases. <br/>
             Here you will find tow .db files. Just downnload these files. <br/>
     step 4: Open sqlite Broswer and click on open database button and choose one of the db file you just downloaded. Here you can view the database. <br/>
     
