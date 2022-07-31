@@ -25,9 +25,8 @@ The project uses sqlLite as its database.
    <a href="url"><img src="https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg" align="left" height="400" width="200" ></a>
          </div>
              
-   <a href="url"><img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg" align="left" height="400" width="200" /><figcaption>Splash Screen</figcaption</a>
+   <a href="url"><img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg" align="left" height="400" width="200" /><figcaption>Register Page</figcaption</a>
          
-    <a href="url"<img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg" align="left" height="400" width="200"/> <gigcaption>Register Page</figcaption></a>
     </div>
     
   ![splashScreen](https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg)
