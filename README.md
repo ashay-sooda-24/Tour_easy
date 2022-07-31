@@ -2,6 +2,9 @@
 App that helps tourists to enjoy their travel time in Mangalore city. It is a simple app built to learn the concepts of sqlLite and Mobile application development.  
 The project uses sqlLite as its database.
 
+# Contents
+  [Installation] (#Installation:)
+
 # Installation:
 1.Clone the repo <br/>
 2.Build the project <br/>
