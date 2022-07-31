@@ -34,7 +34,6 @@ The project uses sqlLite as its database.
    <img src="https://user-images.githubusercontent.com/84183957/182011715-6a060e21-cd2e-451b-a4e6-967d76a5a899.png"  height="400" width="600" >
   
     </div>
-    ![UsersTable](https://user-images.githubusercontent.com/84183957/182011715-6a060e21-cd2e-451b-a4e6-967d76a5a899.png)
 
 ![SourceTable](https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png)
 ![DestinationTable](https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png)
