@@ -3,9 +3,9 @@ App that helps tourists to enjoy their travel time in mangalore city. It is a si
 The project uses sqlLite as its database.
 
 # Installation:
-1.Clone the repo
-2.Build the project 
-3.run the project! Easy 
+1.Clone the repo <br/>
+2.Build the project <br/>
+3.run the project! Easy <br/>
 
 # How to view the database?
 
