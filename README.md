@@ -24,7 +24,7 @@ The project uses sqlLite as its database.
  1. Integrating with google API ie places api, direction api, geolocation api which can be used to get realtime location of the user insted of hardcoded       data. 
  
 # Screenshots
-[!image}{https://postimg.cc/R6H6bNsj]
+![image](https://postimg.cc/R6H6bNsj)
 
 # Have Fun using the app! 🚀
 
