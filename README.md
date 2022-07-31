@@ -21,9 +21,9 @@ The project uses sqlLite as its database.
     Note: Everytime you update the db make sure to download the .db files again. <br/>
     
     
-# Screenshots And Databases
+# ScreenSots and Databases
     
-    <div style="display:flex">
+   <div style="display:flex">
    <img src="https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg" height="400" width="200" >      
    <img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg"  height="400" width="200" >   
    <img src="https://user-images.githubusercontent.com/84183957/182010631-558a83f4-6712-41db-968a-7bcbb54a75c1.jpg"  height="400" width="200" >
