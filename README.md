@@ -24,7 +24,8 @@ The project uses sqlLite as its database.
        
    <img src="https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg" height="400" width="200" >      
    <img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg"  height="400" width="200" >   
-   <img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg"  height="400" width="200" >
+   <img src="https://user-images.githubusercontent.com/84183957/182010631-558a83f4-6712-41db-968a-7bcbb54a75c1.jpg"  height="400" width="200" >
+   <img src="https://user-images.githubusercontent.com/84183957/182010634-b03d481b-9a7d-419b-83a0-7c81748e6ba0.jpg"  height="400" width="200" >
     
          
     </div>
@@ -32,7 +33,6 @@ The project uses sqlLite as its database.
   ![splashScreen](https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg)
 ![Register](https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg)
 ![Login](https://user-images.githubusercontent.com/84183957/182010631-558a83f4-6712-41db-968a-7bcbb54a75c1.jpg)
-
 ![FirstTimeloginHome1](https://user-images.githubusercontent.com/84183957/182010634-b03d481b-9a7d-419b-83a0-7c81748e6ba0.jpg)
 ![FirstTimeloginHome2](https://user-images.githubusercontent.com/84183957/182010640-40ac9070-5013-4d6c-9ebc-514c2f667452.jpg)
 ![HomeAlreadyLoogedin](https://user-images.githubusercontent.com/84183957/182010643-32546738-6898-427c-97b1-3b82dd17d002.jpg)
