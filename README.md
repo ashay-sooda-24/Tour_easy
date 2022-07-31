@@ -27,6 +27,10 @@ The project uses sqlLite as its database.
     <div><h5>Register Page</h5>       
    <a href="url"><img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg" align="left" height="400" width="200" ></a>
     </div> 
+    
+       <div><h5>Register Page</h5>       
+   <a href="url"><img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg" align="left" height="400" width="200" ></a>
+    </div> 
          
     </div>
     
