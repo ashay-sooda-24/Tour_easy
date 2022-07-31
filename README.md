@@ -31,19 +31,14 @@ The project uses sqlLite as its database.
    <img src="https://user-images.githubusercontent.com/84183957/182010647-97adc971-ac6d-4443-8e1e-0450eda8475a.jpg"  height="400" width="200" >
    <img src="https://user-images.githubusercontent.com/84183957/182010649-8de90581-7bcf-4d2b-bc99-edf3505fea94.jpg"  height="400" width="200" >
    <img src="https://user-images.githubusercontent.com/84183957/182010651-5ac211c5-7f16-4e79-8292-f334426d0d79.jpg"  height="400" width="200" >
- 
-         
+   <img src="https://user-images.githubusercontent.com/84183957/182011715-6a060e21-cd2e-451b-a4e6-967d76a5a899.png"  height="400" width="200" >
+   <img src="https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png"  height="400" width="200" >
+   <img src="https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png"  height="400" width="200" >
     </div>
-    
-  ![splashScreen](https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg)
-![Register](https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg)
-![Login](https://user-images.githubusercontent.com/84183957/182010631-558a83f4-6712-41db-968a-7bcbb54a75c1.jpg)
-![FirstTimeloginHome1](https://user-images.githubusercontent.com/84183957/182010634-b03d481b-9a7d-419b-83a0-7c81748e6ba0.jpg)
-![FirstTimeloginHome2](https://user-images.githubusercontent.com/84183957/182010640-40ac9070-5013-4d6c-9ebc-514c2f667452.jpg)
-![HomeAlreadyLoogedin](https://user-images.githubusercontent.com/84183957/182010643-32546738-6898-427c-97b1-3b82dd17d002.jpg)
-![PopUp](https://user-images.githubusercontent.com/84183957/182010647-97adc971-ac6d-4443-8e1e-0450eda8475a.jpg)
-![ExplorePage](https://user-images.githubusercontent.com/84183957/182010649-8de90581-7bcf-4d2b-bc99-edf3505fea94.jpg)
-![ExploreMore](https://user-images.githubusercontent.com/84183957/182010651-5ac211c5-7f16-4e79-8292-f334426d0d79.jpg)
+    ![UsersTable](https://user-images.githubusercontent.com/84183957/182011715-6a060e21-cd2e-451b-a4e6-967d76a5a899.png)
+
+![SourceTable](https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png)
+![DestinationTable](https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png)
 
  # Further Development options:
  1. Integrating with google API ie places api, direction api, geolocation api which can be used to get realtime location of the user insted of hardcoded       data. 
