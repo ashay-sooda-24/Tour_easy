@@ -20,8 +20,10 @@ The project uses sqlLite as its database.
     
     Note: Everytime you update the db make sure to download the .db files again. <br/>
     
+    
+# Screenshots And Databases
+    
     <div style="display:flex">
-       
    <img src="https://user-images.githubusercontent.com/84183957/182010616-e2c03f27-3ea7-4fec-956b-9b6d3ee21e85.jpg" height="400" width="200" >      
    <img src="https://user-images.githubusercontent.com/84183957/182010623-4b86b1e7-8cf8-497f-bd79-1ee03e2e0d4f.jpg"  height="400" width="200" >   
    <img src="https://user-images.githubusercontent.com/84183957/182010631-558a83f4-6712-41db-968a-7bcbb54a75c1.jpg"  height="400" width="200" >
@@ -32,9 +34,7 @@ The project uses sqlLite as its database.
    <img src="https://user-images.githubusercontent.com/84183957/182010649-8de90581-7bcf-4d2b-bc99-edf3505fea94.jpg"  height="400" width="200" >
    <img src="https://user-images.githubusercontent.com/84183957/182010651-5ac211c5-7f16-4e79-8292-f334426d0d79.jpg"  height="400" width="200" >
    <img src="https://user-images.githubusercontent.com/84183957/182011715-6a060e21-cd2e-451b-a4e6-967d76a5a899.png"  height="400" width="600" >
-  
     </div>
-
 ![SourceTable](https://user-images.githubusercontent.com/84183957/182011708-6256f8dd-3863-4f53-bce3-5a36e26693c1.png)
 ![DestinationTable](https://user-images.githubusercontent.com/84183957/182011712-5a0736cf-aa66-4fa9-babc-eb4a5efd2f73.png)
 
