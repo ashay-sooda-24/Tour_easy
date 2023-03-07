@@ -45,7 +45,7 @@ App that helps tourists to enjoy their travel time in Mangalore city. It is a si
    </div>
 
  # Further Development options:
- 1. Integrating with google API ie places api, direction api, geolocation api which can be used to get realtime location of the user insted of hardcoded       data. 
+ 1. Integrating with google API ie places api, direction api, geolocation api, which can be used to get realtime location of the user insted of hardcoded       data. 
  
 
 
